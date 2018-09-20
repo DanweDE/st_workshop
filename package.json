@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "contentful-migration": "^0.12.2"
+    "contentful-migration": "^0.12.2",
+    "lodash": "^4.17.11"
   }
 }
