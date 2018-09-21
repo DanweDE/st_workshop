@@ -1,5 +1,5 @@
-// In this example, we fill the "byLine" field with the combined values of 2 other fields.
-// We want to skip this transformation for all German entries.
+// Transform example app `modules` reference fields using content "blocks" to a
+// `StructuredText` type field.
 
 const mdToSt = require('markdown-to-structured-text')
 const _ = require('lodash')
@@ -7,7 +7,7 @@ const _ = require('lodash')
 module.exports = function (migration, {makeRequest}) {
   migration.transformEntries({
     contentType: 'lesson',
-    from: ['title', 'modules'],
+    from: ['modules'],
     to: ['stField'],
     transformEntryForLocale: async function (fromFields, currentLocale) {
       const ids = fromFields.modules['en-US'].map(e => e.sys.id)
